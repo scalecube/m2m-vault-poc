@@ -2,11 +2,11 @@
 POC for M2M authorization driven by Vault Identities Secrets Engine.
 
 ## Resources
-https://www.vaultproject.io/docs/secrets/identity/index.html
-https://www.vaultproject.io/api/secret/identity/index.html
-https://www.vaultproject.io/api/secret/identity/entity.html
-https://learn.hashicorp.com/vault/identity-access-management/iam-policies
-https://github.com/hashicorp/hcl
+* https://www.vaultproject.io/docs/secrets/identity/index.html
+* https://www.vaultproject.io/api/secret/identity/index.html
+* https://www.vaultproject.io/api/secret/identity/entity.html
+* https://learn.hashicorp.com/vault/identity-access-management/iam-policies
+* https://github.com/hashicorp/hcl
 
 ## Challenge
 Est. common machine-to-machine autorization method/approach for containers authenticated in Vault.
