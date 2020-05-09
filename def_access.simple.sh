@@ -2,8 +2,8 @@ set -u
 
 ACCESS_ID=$1
 TEMPLATE_DATA=$2
-KEY=$ACCESS_ID-id-key
-ROLE=$ACCESS_ID-id-role
+KEY=$ACCESS_ID
+ROLE=$ACCESS_ID
 
 echo "*** granting access: [$ACCESS_ID]"
 
