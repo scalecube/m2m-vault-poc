@@ -16,7 +16,7 @@ echo "{\"key\": \"$KEY\", \"template\": \"$TEMPLATE_DATA\"}" > payload.json
 curl --header "X-Vault-Token: $VAULT_TOKEN" --request POST --data @payload.json $VAULT_ADDR/v1/identity/oidc/role/$ROLE
 
 # Create oidc/key
-echo "{\"allowed_client_ids\": \"*\", \"verification_ttl\": 0, \"rotation_period\": \"1m\"}" > payload.json
+echo "{\"allowed_client_ids\": \"*\", \"verification_ttl\": \"1m\", \"rotation_period\": \"1m\"}" > payload.json
 curl --header "X-Vault-Token: $VAULT_TOKEN" --request POST --data @payload.json $VAULT_ADDR/v1/identity/oidc/key/$KEY
 
 echo "*** access granted!"
