@@ -8,7 +8,7 @@ ROLE=$ACCESS_ID
 echo "*** granting access: [$ACCESS_ID]"
 
 # Register access_request policy which allows to generate oidc token.
-echo "path \"identity/oidc/token/$ACCESS_ID\" {capabilities=[\"create\", \"read\"]}" > payload.hcl
+echo "path \"identity/oidc/token/$ACCESS_ID\" {capabilities=[\"read\"]}" > payload.hcl
 vault policy write $ACCESS_ID-id-token-policy payload.hcl
 
 # Create oidc/role
