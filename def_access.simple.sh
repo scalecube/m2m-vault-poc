@@ -12,7 +12,7 @@ echo "path \"identity/oidc/token/$ACCESS_ID\" {capabilities=[\"read\"]}" > paylo
 vault policy write $ACCESS_ID-id-token-policy payload.hcl
 
 # Create oidc/role
-echo "{\"key\": \"$KEY\", \"template\": \"$TEMPLATE_DATA\"}" > payload.json
+echo "{\"key\": \"$KEY\", \"template\": \"$TEMPLATE_DATA\", \"ttl\": \"1m\"}" > payload.json
 curl --header "X-Vault-Token: $VAULT_TOKEN" --request POST --data @payload.json $VAULT_ADDR/v1/identity/oidc/role/$ROLE
 
 # Create oidc/key
